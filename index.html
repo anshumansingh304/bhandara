@@ -1,10 +1,9 @@
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bhagwa Bhandara</title>
+    <title>Bhandara-Seva</title>
     <meta
       name="description"
       content="A Sanatan Dharma inspired bhandara landing page for seva, prasad, donations, and community meals."
@@ -18,8 +17,8 @@
       <a class="brand" href="#top" aria-label="Bhagwa Bhandara home">
         <span class="brand-mark">ॐ</span>
         <span>
-          <strong>Bhagwa Bhandara</strong>
-          <small>Seva. Prasad. Sangat.</small>
+          <strong>Bhandara-seva</strong>
+          <small>सेवा। प्रसाद। संगत।</small>
         </span>
       </a>
       <nav aria-label="Main navigation">
@@ -27,20 +26,27 @@
         <a href="#bhandaras">Bhandaras</a>
         <a href="#gallery">Darshan</a>
         <a href="#join">Join</a>
+        <a href="#support">Support</a>
       </nav>
       <a class="header-action" href="#join">Offer Seva</a>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-media" role="img" aria-label="Bhandara food distribution in India"></div>
+        <div
+          class="hero-media"
+          role="img"
+          aria-label="Bhandara food distribution in India"
+        ></div>
         <div class="hero-shade"></div>
         <div class="hero-content">
           <p class="eyebrow">सनातन सेवा • अन्नदान महादान</p>
-          <h1 id="hero-title">Feed every bhakt with dignity, warmth, and bhagwa spirit.</h1>
+          <h1 id="hero-title">
+            Feed every bhakt with dignity, warmth, and bhagwa spirit.
+          </h1>
           <p class="hero-copy">
-            Discover nearby bhandaras, sponsor prasad, and organize volunteer seva in one
-            beautiful app inspired by Sanatan Dharma.
+            Discover nearby bhandaras, sponsor prasad, and organize volunteer
+            seva in with us inspired by Sanatan Dharma.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
             <a class="button primary" href="#bhandaras">Find Bhandara</a>
@@ -57,52 +63,70 @@
       <section class="intro-band" aria-label="Daily sankalp">
         <div>
           <p class="section-kicker">Today’s Sankalp</p>
-          <h2>Annadaan that feels organized, sacred, and easy to join.</h2>
+          <h2>
+            A sacred and well-organized Annadaan that becomes a simple and
+            welcoming path for every devotee to participate.
+          </h2>
         </div>
-        <p>
-          Built for mandirs, seva groups, families, and volunteers who want to share food
-          without confusion. Publish timings, collect supplies, coordinate queues, and keep
-          the focus on devotion.
-        </p>
       </section>
 
       <section id="seva" class="feature-grid" aria-labelledby="seva-title">
         <div class="section-heading">
           <p class="section-kicker">Seva Flow</p>
-          <h2 id="seva-title">Everything a bhandara team needs before the first plate is served.</h2>
+          <h2 id="seva-title">
+            Everything a bhandara team needs before the first plate is served.
+          </h2>
         </div>
         <article class="feature-card">
           <span class="icon">द</span>
           <h3>Darshan-first listings</h3>
-          <p>Show mandir name, deity, prasad menu, live timing, queue status, and exact map pin.</p>
+          <p>
+            Show mandir name, deity, prasad menu, live timing, queue status, and
+            exact map pin.
+          </p>
         </article>
         <article class="feature-card">
           <span class="icon">अ</span>
           <h3>Annadaan pledges</h3>
-          <p>Let donors sponsor rice, sabzi, water, plates, fruits, sweets, or full meal batches.</p>
+          <p>
+            Let donors sponsor rice, sabzi, water, plates, fruits, sweets, or
+            full meal batches.
+          </p>
         </article>
         <article class="feature-card">
           <span class="icon">स</span>
           <h3>Sevadar shifts</h3>
-          <p>Assign cooking, serving, crowd flow, cleanup, photo updates, and elder assistance.</p>
+          <p>
+            Assign cooking, serving, crowd flow, cleanup, photo updates, and
+            elder assistance.
+          </p>
         </article>
       </section>
 
-      <section id="bhandaras" class="bhandara-section" aria-labelledby="bhandara-title">
+      <section
+        id="bhandaras"
+        class="bhandara-section"
+        aria-labelledby="bhandara-title"
+      >
         <div class="section-heading">
-          <p class="section-kicker">Live Bhandaras</p>
-          <h2 id="bhandara-title">Bhagwa board for meals happening around you.</h2>
+          <p class="section-kicker">Sevasthal</p>
+          <h2 id="bhandara-title">
+            Choose an Indian city and open major mandirs on Google Maps.
+          </h2>
         </div>
         <div class="bhandara-layout">
-          <aside class="filter-panel" aria-label="Bhandara filters">
+          <aside class="filter-panel" aria-label="Mandir filters">
+            <label for="citySearch">
+              <span>Search city or mandir</span>
+              <input
+                id="citySearch"
+                type="search"
+                placeholder="Ayodhya, Tirupati, Hanuman..."
+              />
+            </label>
             <label for="cityFilter">
               <span>City</span>
-              <select id="cityFilter">
-                <option value="all">All cities</option>
-                <option value="varanasi">Varanasi</option>
-                <option value="delhi">Delhi NCR</option>
-                <option value="jaipur">Jaipur</option>
-              </select>
+              <select id="cityFilter"></select>
             </label>
             <label for="needFilter">
               <span>Need</span>
@@ -114,11 +138,36 @@
               </select>
             </label>
           </aside>
-          <div class="bhandara-list" id="bhandaraList" aria-live="polite"></div>
+          <div class="directory-panel">
+            <div class="map-frame">
+              <div class="map-placeholder">
+                <strong>Google Map</strong>
+                <span
+                  >Select Show Map on any mandir, or open Google Location.</span
+                >
+              </div>
+              <iframe
+                id="templeMap"
+                title="Selected mandir Google Map"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="temple-list" id="templeList" aria-live="polite"></div>
+            <div
+              class="bhandara-list"
+              id="bhandaraList"
+              aria-live="polite"
+            ></div>
+          </div>
         </div>
       </section>
 
-      <section id="gallery" class="gallery-section" aria-labelledby="gallery-title">
+      <section
+        id="gallery"
+        class="gallery-section"
+        aria-labelledby="gallery-title"
+      >
         <div class="section-heading">
           <p class="section-kicker">Darshan Gallery</p>
           <h2 id="gallery-title">Pictures to set the first mood of the app.</h2>
@@ -151,37 +200,81 @@
       <section id="join" class="join-section" aria-labelledby="join-title">
         <div>
           <p class="section-kicker">Join The Sankalp</p>
-          <h2 id="join-title">Register your next bhandara in under a minute.</h2>
+          <h2 id="join-title">
+            Register your next bhandara in under a minute.
+          </h2>
           <p>
-            Share the mandir, prasad details, timing, and what your team needs. The app can
-            turn it into a public seva card for devotees and donors.
+            Share the mandir, prasad details, timing, and what your team needs.
+            The app can turn it into a public seva card for devotees and donors.
           </p>
         </div>
         <form class="join-form" id="joinForm">
           <label for="organizerName">
             <span>Organizer name</span>
-            <input id="organizerName" name="name" type="text" placeholder="Shri Ram Seva Mandal" required />
+            <input
+              id="organizerName"
+              name="name"
+              type="text"
+              placeholder="Shri Ram Seva Mandal"
+              required
+            />
           </label>
           <label for="sevaLocation">
             <span>Location</span>
-            <input id="sevaLocation" name="location" type="text" placeholder="Mandir or chowk name" required />
+            <input
+              id="sevaLocation"
+              name="location"
+              type="text"
+              placeholder="Mandir or chowk name"
+              required
+            />
           </label>
           <label for="prasadPlan">
             <span>Prasad plan</span>
-            <textarea id="prasadPlan" name="plan" placeholder="Khichdi, puri sabzi, water, sweets..." required></textarea>
+            <textarea
+              id="prasadPlan"
+              name="plan"
+              placeholder="Khichdi, puri sabzi, water, sweets..."
+              required
+            ></textarea>
           </label>
-          <button class="button primary" type="submit">Create Seva Card</button>
+          <button class="button primary" type="submit">Submit</button>
           <p class="form-note" id="formNote" role="status"></p>
         </form>
+      </section>
+      <section id="support" class="support-section">
+        <div class="support-container">
+          <h2>Support Seva</h2>
+
+          <p>
+            Your contribution helps us continue Annadaan, Seva, and Prasad
+            distribution, while supporting the growth of this sacred platform.
+          </p>
+
+          <!-- QR Code -->
+          <div class="qr-box">
+            <a
+              href="https://drive.google.com/file/d/1c4LbxRIJEXpeKgwPzFb9l-_5NDUTApRc/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="WhatsApp Image 2026-05-12 at 12.40.23.jpeg"
+                alt="7007487089@ybl"
+              />
+            </a>
+          </div>
+
+          <p class="scan-text">
+            Scan the QR code or click on it to offer your support.
+          </p>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Bhagwa Bhandara concept app • Inspired by Sanatan Dharma and community annadaan.</p>
-      <p>
-        Photos: Wikimedia Commons, including Indian Bhandara Food Distribution by
-        Kumar.dhananjay340, CC BY-SA 4.0.
-      </p>
+      <p>Build by Human for Human</p>
+      <p>Anshuman yadav</p>
     </footer>
 
     <script src="script.js"></script>
