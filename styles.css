@@ -1,4 +1,3 @@
-
 :root {
   --bhagwa: #ff7a00;
   --bhagwa-deep: #c94700;
@@ -207,6 +206,119 @@ h1 {
   gap: 12px;
 }
 
+/* Support Section */
+.support-section {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #fff8f0, #fffdf8);
+  text-align: center;
+}
+
+.support-container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 40px 25px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.support-container h2 {
+  font-size: 2.5rem;
+  color: #8b4513;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.support-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* QR Box */
+.qr-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.qr-box img {
+  width: 240px;
+  max-width: 100%;
+  height: auto;
+  padding: 12px;
+  border-radius: 18px;
+  background: #fff;
+  border: 4px solid #f0d3a5;
+  box-shadow: 0 8px 20px rgba(139, 69, 19, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.qr-box img:hover {
+  transform: scale(1.03);
+}
+
+.scan-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #8b4513;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .support-section {
+    padding: 60px 16px;
+  }
+
+  .support-container {
+    padding: 30px 20px;
+  }
+
+  .support-container h2 {
+    font-size: 2rem;
+  }
+
+  .support-container p {
+    font-size: 1rem;
+  }
+
+  .qr-box img {
+    width: 200px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .support-section {
+    padding: 50px 14px;
+  }
+
+  .support-container {
+    padding: 25px 16px;
+    border-radius: 16px;
+  }
+
+  .support-container h2 {
+    font-size: 1.7rem;
+  }
+
+  .support-container p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .qr-box img {
+    width: 170px;
+    padding: 10px;
+  }
+
+  .scan-text {
+    font-size: 0.9rem;
+  }
+}
+
 .button {
   min-height: 52px;
   display: inline-flex;
@@ -300,6 +412,7 @@ h1 {
 .feature-card,
 .filter-panel,
 .bhandara-card,
+.mandir-card,
 .join-form {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -343,17 +456,20 @@ h1 {
 .gallery-section,
 .join-section {
   padding: 76px 0;
+  scroll-margin-top: 110px;
 }
 
 .bhandara-layout {
   display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
+  grid-template-columns: 280px minmax(0, 1fr);
   gap: 18px;
   margin-top: 26px;
 }
 
 .filter-panel {
   align-self: start;
+  position: sticky;
+  top: 104px;
   display: grid;
   gap: 16px;
   padding: 18px;
@@ -381,6 +497,10 @@ textarea {
   padding: 0 12px;
 }
 
+input[type="search"] {
+  appearance: none;
+}
+
 textarea {
   min-height: 116px;
   padding-top: 12px;
@@ -397,6 +517,151 @@ textarea:focus {
 .bhandara-list {
   display: grid;
   gap: 14px;
+}
+
+.directory-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.map-frame {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #efe1c9;
+  box-shadow: var(--shadow);
+}
+
+.map-placeholder {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  gap: 6px;
+  padding: 24px;
+  color: var(--muted);
+  text-align: center;
+  pointer-events: none;
+}
+
+.map-frame.map-ready .map-placeholder {
+  display: none;
+}
+
+.map-placeholder strong {
+  color: var(--bhagwa-deep);
+  font-size: 24px;
+}
+
+.map-frame iframe {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 420px;
+  display: block;
+  border: 0;
+}
+
+.temple-list {
+  display: grid;
+  gap: 18px;
+  max-height: 760px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.city-temple-group {
+  display: grid;
+  gap: 12px;
+}
+
+.city-heading,
+.mini-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.city-heading h3,
+.mini-heading h3 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.city-heading span {
+  color: var(--bhagwa-deep);
+  font-weight: 900;
+}
+
+.mandir-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.mandir-card {
+  display: grid;
+  min-height: 188px;
+  gap: 18px;
+  padding: 18px;
+}
+
+.mandir-card h4 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.mandir-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.mandir-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-self: end;
+}
+
+.map-button,
+.map-link {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.map-button {
+  border: 0;
+  background: var(--bhagwa);
+  color: #fff;
+  cursor: pointer;
+}
+
+.map-link {
+  border: 1px solid rgba(115, 81, 63, 0.22);
+  background: #fff;
+  color: var(--bhagwa-deep);
+}
+
+.mini-heading {
+  margin-top: 16px;
+}
+
+.mini-heading .section-kicker {
+  width: 100%;
+  margin-bottom: 0;
 }
 
 .bhandara-card {
@@ -514,6 +779,7 @@ figcaption {
   margin: 0;
 }
 
+
 @media (max-width: 840px) {
   .site-header {
     position: absolute;
@@ -541,9 +807,20 @@ figcaption {
   .intro-band,
   .feature-grid,
   .bhandara-layout,
+  .mandir-grid,
   .gallery-grid,
   .join-section {
     grid-template-columns: 1fr;
+  }
+
+  .filter-panel {
+    position: static;
+  }
+
+  .temple-list {
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
   }
 
   .feature-grid {
@@ -571,6 +848,7 @@ figcaption {
 }
 
 @media (max-width: 560px) {
+
   .brand small,
   .header-action {
     display: none;
@@ -597,4 +875,6 @@ figcaption {
   .site-footer {
     width: min(100% - 24px, 1120px);
   }
+
+
 }
