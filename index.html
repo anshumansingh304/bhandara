@@ -1,1 +1,189 @@
 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhagwa Bhandara</title>
+    <meta
+      name="description"
+      content="A Sanatan Dharma inspired bhandara landing page for seva, prasad, donations, and community meals."
+    />
+    <link rel="preconnect" href="https://commons.wikimedia.org" />
+    <link rel="preconnect" href="https://upload.wikimedia.org" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Bhagwa Bhandara home">
+        <span class="brand-mark">ॐ</span>
+        <span>
+          <strong>Bhagwa Bhandara</strong>
+          <small>Seva. Prasad. Sangat.</small>
+        </span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#seva">Seva</a>
+        <a href="#bhandaras">Bhandaras</a>
+        <a href="#gallery">Darshan</a>
+        <a href="#join">Join</a>
+      </nav>
+      <a class="header-action" href="#join">Offer Seva</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" role="img" aria-label="Bhandara food distribution in India"></div>
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">सनातन सेवा • अन्नदान महादान</p>
+          <h1 id="hero-title">Feed every bhakt with dignity, warmth, and bhagwa spirit.</h1>
+          <p class="hero-copy">
+            Discover nearby bhandaras, sponsor prasad, and organize volunteer seva in one
+            beautiful app inspired by Sanatan Dharma.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#bhandaras">Find Bhandara</a>
+            <a class="button secondary" href="#join">Start Seva</a>
+          </div>
+          <div class="hero-stats" aria-label="Community impact">
+            <span><strong>108+</strong> meals listed</span>
+            <span><strong>24/7</strong> seva alerts</span>
+            <span><strong>0%</strong> platform commission</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-band" aria-label="Daily sankalp">
+        <div>
+          <p class="section-kicker">Today’s Sankalp</p>
+          <h2>Annadaan that feels organized, sacred, and easy to join.</h2>
+        </div>
+        <p>
+          Built for mandirs, seva groups, families, and volunteers who want to share food
+          without confusion. Publish timings, collect supplies, coordinate queues, and keep
+          the focus on devotion.
+        </p>
+      </section>
+
+      <section id="seva" class="feature-grid" aria-labelledby="seva-title">
+        <div class="section-heading">
+          <p class="section-kicker">Seva Flow</p>
+          <h2 id="seva-title">Everything a bhandara team needs before the first plate is served.</h2>
+        </div>
+        <article class="feature-card">
+          <span class="icon">द</span>
+          <h3>Darshan-first listings</h3>
+          <p>Show mandir name, deity, prasad menu, live timing, queue status, and exact map pin.</p>
+        </article>
+        <article class="feature-card">
+          <span class="icon">अ</span>
+          <h3>Annadaan pledges</h3>
+          <p>Let donors sponsor rice, sabzi, water, plates, fruits, sweets, or full meal batches.</p>
+        </article>
+        <article class="feature-card">
+          <span class="icon">स</span>
+          <h3>Sevadar shifts</h3>
+          <p>Assign cooking, serving, crowd flow, cleanup, photo updates, and elder assistance.</p>
+        </article>
+      </section>
+
+      <section id="bhandaras" class="bhandara-section" aria-labelledby="bhandara-title">
+        <div class="section-heading">
+          <p class="section-kicker">Live Bhandaras</p>
+          <h2 id="bhandara-title">Bhagwa board for meals happening around you.</h2>
+        </div>
+        <div class="bhandara-layout">
+          <aside class="filter-panel" aria-label="Bhandara filters">
+            <label for="cityFilter">
+              <span>City</span>
+              <select id="cityFilter">
+                <option value="all">All cities</option>
+                <option value="varanasi">Varanasi</option>
+                <option value="delhi">Delhi NCR</option>
+                <option value="jaipur">Jaipur</option>
+              </select>
+            </label>
+            <label for="needFilter">
+              <span>Need</span>
+              <select id="needFilter">
+                <option value="all">Any need</option>
+                <option value="volunteers">Volunteers</option>
+                <option value="supplies">Supplies</option>
+                <option value="sponsor">Sponsor</option>
+              </select>
+            </label>
+          </aside>
+          <div class="bhandara-list" id="bhandaraList" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="gallery" class="gallery-section" aria-labelledby="gallery-title">
+        <div class="section-heading">
+          <p class="section-kicker">Darshan Gallery</p>
+          <h2 id="gallery-title">Pictures to set the first mood of the app.</h2>
+        </div>
+        <div class="gallery-grid">
+          <figure>
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Indian_Bhandara_Food_Distribution.jpg?width=900"
+              alt="Volunteers serving food during an Indian bhandara"
+            />
+            <figcaption>Bhandara food distribution</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Khandoba_temple_Pune.jpg?width=900"
+              alt="Bhagwa colored bhandara ritual at Khandoba temple in Jejuri"
+            />
+            <figcaption>Bhagwa temple energy</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Bhog%20consisting%20of%20Puri%2C%20Aloo%20Sabji%2C%20Chana%20Masala%2C%20Khichri%2C%20Halwa%2C%20and%20Jalebi%20on%20Mahanavami%20at%20Jyoti%20Nagar%20Durga%20Puja%20Samiti%20pandal%2C%20Jyoti%20Nagar%2C%20Dibrugarh%20in%202024..jpg?width=900"
+              alt="Prasad plate with puri, sabzi, khichri, halwa, and jalebi"
+            />
+            <figcaption>Prasad prepared with shraddha</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="join" class="join-section" aria-labelledby="join-title">
+        <div>
+          <p class="section-kicker">Join The Sankalp</p>
+          <h2 id="join-title">Register your next bhandara in under a minute.</h2>
+          <p>
+            Share the mandir, prasad details, timing, and what your team needs. The app can
+            turn it into a public seva card for devotees and donors.
+          </p>
+        </div>
+        <form class="join-form" id="joinForm">
+          <label for="organizerName">
+            <span>Organizer name</span>
+            <input id="organizerName" name="name" type="text" placeholder="Shri Ram Seva Mandal" required />
+          </label>
+          <label for="sevaLocation">
+            <span>Location</span>
+            <input id="sevaLocation" name="location" type="text" placeholder="Mandir or chowk name" required />
+          </label>
+          <label for="prasadPlan">
+            <span>Prasad plan</span>
+            <textarea id="prasadPlan" name="plan" placeholder="Khichdi, puri sabzi, water, sweets..." required></textarea>
+          </label>
+          <button class="button primary" type="submit">Create Seva Card</button>
+          <p class="form-note" id="formNote" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Bhagwa Bhandara concept app • Inspired by Sanatan Dharma and community annadaan.</p>
+      <p>
+        Photos: Wikimedia Commons, including Indian Bhandara Food Distribution by
+        Kumar.dhananjay340, CC BY-SA 4.0.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
